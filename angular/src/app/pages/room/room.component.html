@@ -1,0 +1,7 @@
+<video #localVideo class="localVideo"></video>
+<hr>
+<div *ngFor="let client of webrtcClients" class="remoteVideos">
+  <video autoplay width="320" height="240">
+    <source [src]="getVideoStreamURL(client.getstream())"/>
+  </video>
+</div>
